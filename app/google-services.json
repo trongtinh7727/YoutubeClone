@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "360104350655",
+    "firebase_url": "https://clone-658cb-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "clone-658cb",
+    "storage_bucket": "clone-658cb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:360104350655:android:6cfce7d9c1f207607dc70a",
+        "android_client_info": {
+          "package_name": "com.iiex.videocommunity"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "360104350655-g41dr46ipsnj3pkiorpfuh2sf327pj4a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iiex.videocommunity",
+            "certificate_hash": "dfaabd5ad288b374b4379c62ee08bc3a5ce3f6d4"
+          }
+        },
+        {
+          "client_id": "360104350655-qbo30c0rgnfhuefd4rc4ogpc9idajd0r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXGlmo5DB8i-YysnnBmHCgqyTXpa9IuOo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "360104350655-qbo30c0rgnfhuefd4rc4ogpc9idajd0r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Video Community</string>
+    <string name="large_text">
+        "ompleted or cancelled, the component will return to its resting "
+        "elevation.\n\n"
+    </string>
+    <string name="title_home">Home</string>
+    <string name="title_rank">Rank</string>
+    <string name="title_add"></string>
+    <string name="title_subscription">Subscription</string>
+    <string name="title_library">Library</string>
+</resources>
