@@ -65,7 +65,10 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
                     .fitCenter()
                     .into(binding.videoThumbnail);
 
-            binding.executePendingBindings();
+            Glide.with(itemView.getContext())
+                    .load(video.getChannelPicture())
+                    .fitCenter()
+                    .into(binding.channelPicture);
             binding.executePendingBindings();
         }
     }

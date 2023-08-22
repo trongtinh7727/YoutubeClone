@@ -7,6 +7,8 @@ public class Video {
     private Long views;
     private String publishedTime;
 
+    private String channelPicture;
+
     private String thumbnail;
 
     public String getThumbnail() {
@@ -21,12 +23,21 @@ public class Video {
 
     }
 
-    public Video(String title, String channelName, Long views, String publishedTime, String thumbnail) {
+    public Video(String title, String channelName, Long views, String publishedTime, String channelPicture, String thumbnail) {
         this.title = title;
         this.channelName = channelName;
         this.views = views;
         this.publishedTime = publishedTime;
+        this.channelPicture = channelPicture;
         this.thumbnail = thumbnail;
+    }
+
+    public String getChannelPicture() {
+        return channelPicture;
+    }
+
+    public void setChannelPicture(String channelPicture) {
+        this.channelPicture = channelPicture;
     }
 
     public String getTitle() {
