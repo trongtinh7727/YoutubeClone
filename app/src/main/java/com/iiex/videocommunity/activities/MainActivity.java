@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
+
+import com.google.firebase.FirebaseApp;
 import com.iiex.videocommunity.R;
 import com.iiex.videocommunity.fragments.HomeFragment;
 
@@ -14,8 +16,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        FirebaseApp.initializeApp(this);
         setContentView(R.layout.activity_main);
-
         // Thay thế Fragment mặc định bằng HomeFragment khi khởi động ứng dụng
         if (savedInstanceState == null) {
             loadFragment(new HomeFragment());

@@ -1,16 +1,48 @@
 package com.iiex.videocommunity.repositorys;
 
+import androidx.annotation.NonNull;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.iiex.videocommunity.model.Video;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class VideoRepository {
-    public List<Video> getSuggestedVideos() {
-       Video v1 = new Video("Tinh nè", "https://firebasestorage.googleapis.com/v0/b/clone-658cb.appspot.com/o/VIETNAM%20%20My%20Home%20%20Masew%20MyoMouse%20Nguyen%20Loi%20Version%202%20Sáo_1080p.mp4?alt=media&token=f760f792-dbc8-4fde-b651-d2b2688b85b1");
-       List<Video> list = new ArrayList<>();
-       list.add(v1);
-       return list;
+    private DatabaseReference databaseReference;
+
+    public VideoRepository() {
+        databaseReference = FirebaseDatabase.getInstance().getReference("videos");
+    }
+
+    public LiveData<List<Video>> getVideos() {
+        MutableLiveData<List<Video>> videosLiveData = new MutableLiveData<>();
+
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                List<Video> videos = new ArrayList<>();
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                    Video video = snapshot.getValue(Video.class);
+                    videos.add(video);
+                }
+                videosLiveData.setValue(videos);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                // Xử lý lỗi
+            }
+        });
+
+        return videosLiveData;
     }
 }
+
 

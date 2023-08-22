@@ -4,28 +4,25 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 import com.iiex.videocommunity.model.Video;
 import com.iiex.videocommunity.repositorys.VideoRepository;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class VideoViewModel extends ViewModel {
     private VideoRepository videoRepository;
-    private MutableLiveData<List<Video>> videoLiveData;
+    private LiveData<List<Video>> videosLiveData;
 
     public VideoViewModel() {
         videoRepository = new VideoRepository();
-        videoLiveData = new MutableLiveData<List<Video>>();
-        loadSuggestedVideos();
+        videosLiveData = videoRepository.getVideos();
     }
 
-    public LiveData<List<Video>> getSuggestedVideos() {
-        return videoLiveData;
-    }
-
-    public void loadSuggestedVideos() {
-        // Call a method from the repository to get the list of suggested videos
-        List<Video> suggestedVideos = videoRepository.getSuggestedVideos();
-        videoLiveData.setValue(suggestedVideos);
+    public LiveData<List<Video>> getVideosLiveData() {
+        return videosLiveData;
     }
 }
+

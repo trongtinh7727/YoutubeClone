@@ -2,26 +2,64 @@ package com.iiex.videocommunity.model;
 
 public class Video {
     private String title;
-    private String videoUrl;
+    private String channelName;
 
-    public Video(String title, String videoUrl) {
-        this.title = title;
-        this.videoUrl = videoUrl;
+    private Long views;
+    private String publishedTime;
+
+    private String thumbnail;
+
+    public String getThumbnail() {
+        return thumbnail;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setThumbnail(String thumbnail) {
+        this.thumbnail = thumbnail;
     }
 
-    public void setVideoUrl(String videoUrl) {
-        this.videoUrl = videoUrl;
+    public Video(){
+
+    }
+
+    public Video(String title, String channelName, Long views, String publishedTime, String thumbnail) {
+        this.title = title;
+        this.channelName = channelName;
+        this.views = views;
+        this.publishedTime = publishedTime;
+        this.thumbnail = thumbnail;
     }
 
     public String getTitle() {
         return title;
     }
 
-    public String getVideoUrl() {
-        return videoUrl;
+    public void setTitle(String title) {
+        this.title = title;
     }
+
+    public String getChannelName() {
+        return channelName;
+    }
+
+    public void setChannelName(String channelName) {
+        this.channelName = channelName;
+    }
+
+    public Long getViews() {
+        return views;
+    }
+
+    public void setViews(Long views) {
+        this.views = views;
+    }
+
+    public String getPublishedTime() {
+        return publishedTime;
+    }
+
+    public void setPublishedTime(String publishedTime) {
+        this.publishedTime = publishedTime;
+    }
+
 }
+
