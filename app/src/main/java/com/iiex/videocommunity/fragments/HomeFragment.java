@@ -1,5 +1,6 @@
 package com.iiex.videocommunity.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 
+import com.iiex.videocommunity.activities.VideoPlayerActivity;
 import com.iiex.videocommunity.adapters.VideoAdapter;
 import com.iiex.videocommunity.databinding.FragmentHomeBinding;
 import com.iiex.videocommunity.model.Video;
@@ -32,6 +34,18 @@ public class HomeFragment extends Fragment {
         super.onCreate(savedInstanceState);
         videoViewModel = new ViewModelProvider(this).get(VideoViewModel.class);
         videoAdapter = new VideoAdapter(new ArrayList<>());
+        videoAdapter.setOnItemClickListener(new VideoAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(Video video) {
+                openVideoPlayer(video.getVideoUrl());
+            }
+        });
+    }
+
+    private void openVideoPlayer(String videoUrl) {
+        Intent intent = new Intent(getActivity(), VideoPlayerActivity.class);
+        intent.putExtra("videoUrl", videoUrl);
+        startActivity(intent);
     }
 
     @Override

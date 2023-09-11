@@ -8,7 +8,7 @@
         app:showAsAction="always" />
     <item
         android:id="@+id/nav_rank"
-        android:icon="@drawable/ic_rank"
+        android:icon="@drawable/ic_rank_off"
         android:title="@string/title_rank"
         app:showAsAction="always" />
     <item

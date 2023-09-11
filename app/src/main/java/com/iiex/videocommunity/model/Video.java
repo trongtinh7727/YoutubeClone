@@ -10,6 +10,15 @@ public class Video {
     private String channelPicture;
 
     private String thumbnail;
+    private String videoUrl;
+
+    public String getVideoUrl() {
+        return videoUrl;
+    }
+
+    public void setVideoUrl(String videoUrl) {
+        this.videoUrl = videoUrl;
+    }
 
     public String getThumbnail() {
         return thumbnail;
@@ -23,13 +32,15 @@ public class Video {
 
     }
 
-    public Video(String title, String channelName, Long views, String publishedTime, String channelPicture, String thumbnail) {
+    public Video(String title, String channelName, Long views, String publishedTime,
+                 String channelPicture, String thumbnail, String videoUrl) {
         this.title = title;
         this.channelName = channelName;
         this.views = views;
         this.publishedTime = publishedTime;
         this.channelPicture = channelPicture;
         this.thumbnail = thumbnail;
+        this.videoUrl = videoUrl;
     }
 
     public String getChannelPicture() {

@@ -220,7 +220,7 @@
 
     <!-- Fragment Container -->
 
-    <!-- Bottom Navigation -->
+
     <FrameLayout
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
@@ -229,6 +229,7 @@
         android:layout_marginTop="2dp"
         android:layout_marginBottom="40dp"/>
 
+    <!-- Bottom Navigation -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavView"
         android:layout_width="match_parent"
