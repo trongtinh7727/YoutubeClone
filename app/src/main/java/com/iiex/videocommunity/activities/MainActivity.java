@@ -9,6 +9,7 @@ import android.os.Bundle;
 import com.google.firebase.FirebaseApp;
 import com.iiex.videocommunity.R;
 import com.iiex.videocommunity.fragments.HomeFragment;
+import com.iiex.videocommunity.fragments.VideoListFragment;
 
 
 public class MainActivity extends AppCompatActivity {

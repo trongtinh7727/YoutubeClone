@@ -1,6 +1,8 @@
 package com.iiex.videocommunity.model;
 
-public class Video {
+import java.io.Serializable;
+
+public class Video implements Serializable {
     private String title;
     private String channelName;
 

@@ -16,4 +16,9 @@
         <item name="android:windowTranslucentStatus">true</item>
         <item name="android:windowTranslucentNavigation">true</item>
     </style>
+    <style name="MyRipple">
+        <item name="colorControlHighlight">@color/ripple_color</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+    </style>
+    <color name="ripple_color">#FF4081</color>
 </resources>

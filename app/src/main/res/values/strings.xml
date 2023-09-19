@@ -2,6 +2,33 @@
     <string name="app_name">Video Community</string>
     <string name="large_text">
         "ompleted or cancelled, the component will return to its resting "
+        "ompleted or cancelled, the component will return to its resting "
+        "ompleted or cancelled, the component will return to its resting "
+        "ompleted or cancelled, the component will return to its resting "
+        "ompleted or cancelled, the component will return to its resting "
+        "ompleted or cancelled, the component will return to its resting "
+        "ompleted or cancelled, the component will return to its resting "
+        "ompleted or cancelled, the component will return to its resting "
+        "ompleted or cancelled, the component will return to its resting "
+        "ompleted or cancelled, the component will return to its resting "
+        "ompleted or cancelled, the component will return to its resting "
+        "ompleted or cancelled, the component will return to its resting "
+        "ompleted or cancelled, the component will return to its resting "
+        "ompleted or cancelled, the component will return to its resting "
+        "ompleted or cancelled, the component will return to its resting "
+        "ompleted or cancelled, the component will return to its resting "
+        "ompleted or cancelled, the component will return to its resting "
+        "ompleted or cancelled, the component will return to its resting "
+        "ompleted or cancelled, the component will return to its resting "
+        "ompleted or cancelled, the component will return to its resting "
+        "ompleted or cancelled, the component will return to its resting "
+        "ompleted or cancelled, the component will return to its resting "
+        "ompleted or cancelled, the component will return to its resting "
+        "ompleted or cancelled, the component will return to its resting "
+        "ompleted or cancelled, the component will return to its resting "
+        "ompleted or cancelled, the component will return to its resting "
+        "ompleted or cancelled, the component will return to its resting "
+        "ompleted or cancelled, the component will return to its resting "
         "elevation.\n\n"
     </string>
     <string name="title_home">Home</string>
@@ -9,4 +36,16 @@
     <string name="title_add"></string>
     <string name="title_subscription">Subscription</string>
     <string name="title_library">Library</string>
+    <string name="jul_1_2022">Jul 1, 2022</string>
+    <string name="tinhga_nger">#tinhga` @nger  @nger @nger @nger @nger @nger @nger @nger @nger @nger @nger</string>
+    <string name="description">ngerngerngerngerngerngerngerngerngerngerngerngerngerngerngerngernger
+        ngerngerngerngerngerngerngerngerngerngerngerngerngerngerngerngernger
+        ngerngerngerngerngerngerngerngerngerngerngerngernger</string>
+    <string name="_00_00_00">00:00:00</string>
+    <string name="tap_to_unlock">Tap to unlock</string>
+    <string name="screen_locked">Screen Locked</string>
+    <string name="unlock_controls">"Uncontrol "</string>
+    <string name="rotate">Rotate</string>
+    <string name="audio_sub">audio Sub</string>
+    <string name="lock">lock</string>
 </resources>

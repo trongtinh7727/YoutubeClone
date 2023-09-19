@@ -27,7 +27,7 @@
             android:name=".activities.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.VideoPlayerActivity"
+            android:name=".activities.ViewActivity"
             android:exported="false" />
 
     </application>
