@@ -16,6 +16,7 @@
 
             <!--  Video view    -->
             <RelativeLayout
+                android:id="@+id/zoom_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
