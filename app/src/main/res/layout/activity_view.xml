@@ -26,6 +26,7 @@
                 <include layout="@layout/custom_controls"/>
             </RelativeLayout>
 
+
             <!-- Drop layout to display video info -->
             <LinearLayout
                 android:orientation="horizontal"

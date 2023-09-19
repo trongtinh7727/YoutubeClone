@@ -4,11 +4,13 @@ import static com.google.android.material.bottomsheet.BottomSheetBehavior.STATE_
 import static com.google.android.material.bottomsheet.BottomSheetBehavior.STATE_HIDDEN;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.Toast;
+import android.widget.VideoView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -28,10 +30,11 @@ import com.iiex.videocommunity.viewmodels.ViewViewModel;
 public class ViewActivity extends AppCompatActivity {
 
     private ViewViewModel viewModel;
+    private VideoView videoView;
     private ActivityViewBinding binding; // DataBinding
     private GridView gridView;
 
-    private ImageButton show,close,back;
+    private ImageButton back;
 
 
     @Override
@@ -42,6 +45,7 @@ public class ViewActivity extends AppCompatActivity {
         // Khởi tạo ViewViewModel
         viewModel =  new ViewModelProvider(this).get(ViewViewModel.class);
         binding.setViewModel(viewModel);
+        videoView = binding.videoView;
 
         // Lấy dữ liệu từ Intent
         Intent intent = getIntent();
@@ -50,7 +54,8 @@ public class ViewActivity extends AppCompatActivity {
         // Đặt dữ liệu vào ViewViewModel
 
         if (video != null) {
-
+            viewModel.setVideo(video, videoView);
+            viewModel.togglePlayPause();
         }
 
 
@@ -59,8 +64,6 @@ public class ViewActivity extends AppCompatActivity {
         transaction.addToBackStack(null);
         transaction.commit();
 
-//        show = findViewById(R.id.btn_show_more);
-//        close = findViewById(R.id.btn_close);
         back = findViewById(R.id.videoView_go_back);
 
 

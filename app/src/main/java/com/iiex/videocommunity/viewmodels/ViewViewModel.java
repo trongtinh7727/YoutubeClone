@@ -2,6 +2,7 @@ package com.iiex.videocommunity.viewmodels;
 
 import android.media.MediaPlayer;
 
+import androidx.annotation.NonNull;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
@@ -12,6 +13,7 @@ import android.media.PlaybackParams;
 import android.net.Uri;
 import android.os.Handler;
 import android.os.Looper;
+import android.view.SurfaceHolder;
 import android.widget.SeekBar;
 import android.widget.VideoView;
 
@@ -87,7 +89,22 @@ public class ViewViewModel extends ViewModel {
 
         try {
             mediaPlayer.setDataSource(video.getVideoUrl());
-            mediaPlayer.setDisplay(videoView.getHolder());
+            videoView.getHolder().addCallback(new SurfaceHolder.Callback() {
+                @Override
+                public void surfaceCreated(@NonNull SurfaceHolder surfaceHolder) {
+                    mediaPlayer.setDisplay(surfaceHolder);
+                }
+
+                @Override
+                public void surfaceChanged(@NonNull SurfaceHolder surfaceHolder, int i, int i1, int i2) {
+
+                }
+
+                @Override
+                public void surfaceDestroyed(@NonNull SurfaceHolder surfaceHolder) {
+
+                }
+            });
             mediaPlayer.prepare();
             duration.setValue(mediaPlayer.getDuration());
             isPlaying.setValue(false);
